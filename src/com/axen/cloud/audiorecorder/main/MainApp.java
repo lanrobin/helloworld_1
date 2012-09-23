@@ -1,6 +1,6 @@
 package com.axen.cloud.audiorecorder.main;
 
-import com.axen.cloud.auth.SkyDriverPersister;
+import com.axen.cloud.auth.skydrive.SkyDriverPersister;
 import com.axen.mp3.LameWrapper;
 import com.axen.utils.L;
 import com.microsoft.live.LiveAuthClient;
@@ -20,12 +20,6 @@ public class MainApp extends Application {
 	public void onCreate() {
 		super.onCreate();
 		L.d(TAG, "Lame version:" + LameWrapper.getVersion());
-		
-		mSession = SkyDriverPersister.getInstance(this).getOauthObject();
-		
-		if(mSession instanceof LiveConnectSession) {
-			mLiveConnectClient = new LiveConnectClient((LiveConnectSession)mSession);
-		}
 	}
 
 	@Override

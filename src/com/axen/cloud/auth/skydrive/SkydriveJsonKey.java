@@ -1,4 +1,4 @@
-package com.axen.cloud.auth;
+package com.axen.cloud.auth.skydrive;
 
 public class SkydriveJsonKey {
 	public static final String CODE = "code";
@@ -27,6 +27,10 @@ public class SkydriveJsonKey {
     public static final String TYPE = "type";
     public static final String PARENT_ID = "parent_id";
     public static final String SOURCE = "source";
+    public static final String IS_EMBEDDABLE = "is_embeddable";
+    public static final String COUNT = "count";
+    public static final String SIZE = "size";
+	public static final String UPLOAD_LOCATION = "upload_location";
 
     private SkydriveJsonKey() {
         throw new AssertionError();

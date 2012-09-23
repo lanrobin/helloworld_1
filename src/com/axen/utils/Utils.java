@@ -4,6 +4,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.UUID;
 
+import android.text.TextUtils;
+
 public class Utils {
 	
 	private static final int COMPARE_NUM = 7;
@@ -62,5 +64,30 @@ public class Utils {
 		}
 		
 		return longer.endsWith(shorter);
+	}
+	/**
+	 * 把含有true或false的字条转换成boolean型
+	 * @param s
+	 * @return 只有字符里含有true的字符才转换为true.忽略大小写。
+	 */
+	public static boolean parseBooleanString(String s) {
+		if(TextUtils.isEmpty(s)) {
+			return false;
+		}else if(s.toLowerCase().contains("true")) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static int parseIntString(String s) {
+		int ret = 0;
+		if(!TextUtils.isEmpty(s)) {
+			try {
+				ret = Integer.parseInt(s);
+			}catch(NumberFormatException e) {
+				
+			}
+		}
+		return ret;
 	}
 }

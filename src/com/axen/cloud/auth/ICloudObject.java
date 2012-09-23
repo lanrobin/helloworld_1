@@ -8,11 +8,17 @@ public abstract class ICloudObject {
 	private String id;
 	private String type;
 	private String name;
-	
-	public ICloudObject(String id, String type,String name) {
+	private String path;
+
+	public ICloudObject(String id, String type,String name, String path) {
 		this.id = id;
 		this.type = type;
 		this.name = name;
+		this.path = path;
+	}
+	
+	public ICloudObject(){
+		
 	}
 
 	public String getId() {
@@ -39,6 +45,11 @@ public abstract class ICloudObject {
 		this.name = name;
 	}
 	
-	
-	
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
 }

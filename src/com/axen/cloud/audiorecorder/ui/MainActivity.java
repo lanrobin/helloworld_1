@@ -7,7 +7,8 @@ import org.json.JSONObject;
 import com.axen.cloud.audiorecorder.R;
 import com.axen.cloud.audiorecorder.audio.AudioRecordThread;
 import com.axen.cloud.audiorecorder.main.MainApp;
-import com.axen.cloud.auth.SkydriveJsonKey;
+import com.axen.cloud.auth.skydrive.SkyDriveOperation;
+import com.axen.cloud.auth.skydrive.SkydriveJsonKey;
 import com.axen.cloud.auth.ui.SkyDriveSignInActivity;
 import com.axen.utils.Config;
 import com.axen.utils.L;
@@ -70,14 +71,16 @@ public class MainActivity extends Activity implements OnClickListener {
 	        startActivityForResult(intent, AUTH_REQUEST_CODE);
 			break;
 		case R.id.main_button_test:
-			LiveConnectClient client = (LiveConnectClient)mApp.getConnectClient();
+			
+			/*
+			LiveConnectClient client = new SkyDriveOperation(this).getClient();
 			
 			if(client != null) {
 				client.getAsync(Config.SKYDRIVE_HOME_FOLDER + "/files", new LiveOperationListener() {
 
 					@Override
 					public void onComplete(LiveOperation op) {
-						// L.d(TAG, op.getResult().toString());
+						L.d(TAG, op.getResult().toString());
 						JSONObject result = op.getResult();
 						
 						if(result.has(SkydriveJsonKey.ERROR)) {
@@ -108,6 +111,9 @@ public class MainActivity extends Activity implements OnClickListener {
 					
 				});
 			}
+			*/
+			new SkyDriveOperation(this).ls(null, null);
+			
 			break;
 		default:
 			break;

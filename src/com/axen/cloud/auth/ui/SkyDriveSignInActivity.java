@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import com.axen.cloud.audiorecorder.R;
 import com.axen.cloud.audiorecorder.main.MainApp;
-import com.axen.cloud.auth.SkyDriverPersister;
+import com.axen.cloud.auth.skydrive.SkyDriverPersister;
 import com.axen.utils.Config;
 import com.microsoft.live.LiveAuthClient;
 import com.microsoft.live.LiveAuthException;
@@ -104,7 +104,7 @@ public class SkyDriveSignInActivity extends Activity implements
 
 			@Override
 			public void run() {
-				SkyDriverPersister.getInstance(mApp).persist(session);
+				new SkyDriverPersister(mApp).persist(session);
 			}
 			
 		}.start();

@@ -1,4 +1,4 @@
-package com.axen.cloud.auth;
+package com.axen.cloud.auth.skydrive;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -20,6 +20,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import org.xmlpull.v1.XmlSerializer;
 
+import com.axen.cloud.auth.IOauthPersister;
 import com.axen.utils.ArrayUtil;
 import com.axen.utils.Config;
 import com.axen.utils.L;
@@ -118,18 +119,9 @@ public class SkyDriverPersister implements IOauthPersister {
 		return null;
 	}
 
-	private SkyDriverPersister(Context c) {
+	public SkyDriverPersister(Context c) {
 		mContext = c;
 	}
-
-	public static synchronized SkyDriverPersister getInstance(Context c) {
-		if (_INSTANCE == null) {
-			_INSTANCE = new SkyDriverPersister(c);
-		}
-		return _INSTANCE;
-	}
-
-	private static SkyDriverPersister _INSTANCE = null;
 
 	private boolean saveToXML(Context c, LiveConnectSession s) {
 		try {
