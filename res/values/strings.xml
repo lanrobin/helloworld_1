@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">CloudAudioRecorder</string>
+    <string name="string_main_start_recording">Start Record</string>
+    <string name="string_main_stop_recording">Stop Record</string>
+    <string name="string_main_start_auth">Start Auth</string>
+    <string name="welcome">Welcome</string>
+    <string name="begin">Begin</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_page_is_loading">Page is loading, please wait&#8230;</string>
+	<string name="sign_in_failed">Login failed, please try again.</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+    <Button
+        android:id="@+id/main_button_start_recording"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/string_main_start_recording" />
+
+    <Button
+        android:id="@+id/main_button_stop_recording"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/string_main_stop_recording" />
+
+    <Button
+        android:id="@+id/main_button_start_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/string_main_start_auth" />
+
+    <Button
+        android:id="@+id/main_button_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test" />
+
+</LinearLayout>
