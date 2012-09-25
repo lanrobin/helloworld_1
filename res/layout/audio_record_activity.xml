@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/audio_record_timer_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/textview_border"
+        android:text="@string/audio_record_timer_default"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_color" />
+    
+    <Button android:id="@+id/audio_record_start_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/audio_record_start_record"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_color"/>
+    
+    <Button android:id="@+id/audio_record_settings_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/audio_record_settings"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_color"/>
+    
+        <Button android:id="@+id/audio_record_view_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/audio_record_view"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_color"/>
+
+</LinearLayout>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="signin_window_background">#FFFFFF</color>
-    
+    <color name="window_background">#FFEEEEEE</color>
+    <color name="widget_border_color">#FFDDDDDD</color>
+    <color name="text_color">#FF000000</color>
 </resources>

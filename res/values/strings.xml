@@ -10,5 +10,49 @@
     <string name="begin">Begin</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_in_page_is_loading">Page is loading, please wait&#8230;</string>
-	<string name="sign_in_failed">Login failed, please try again.</string>
+    <string name="sign_in_failed">Login failed, please try again.</string>
+    <string name="audio_record_timer_default">00:00:00</string>
+    <string name="audio_record_start_record">Start recording</string>
+    <string name="audio_record_stop_record">Stop recording</string>
+    <string name="audio_record_settings">Settings</string>
+    <string name="audio_record_view">View Audio files</string>
+    
+    
+    <string name="setting_audio_category">Audio Settings</string>
+    <string name="setting_audio_quality_title">Audio quality</string>
+    <string name="setting_audio_quality_dialog_title">Select quality</string>
+    <string name="setting_audio_quality_summary">Set audio recording quality. Higher quality will generate larger files.</string>
+   
+    <string name="setting_audio_split_title">Audio split interval</string>
+    <string name="setting_audio_split_dialog_title">Select split time</string>
+    <string name="setting_audio_split_summary">To keep safety, we will split continuous recording into several files.</string>
+
+    <string name="setting_audio_record_call_title">Record phone call</string>
+    <string name="setting_audio_record_call_summary">Record phone call or specific number\'s call. Default record all calls.</string>
+    
+    <string name="setting_audio_record_number_title">Record number setting</string>
+    <string name="setting_audio_record_number_summary">Set which number\'s call do you want to record.</string>
+    
+    <string name="setting_security_category">Security Settings</string>
+    <string name="setting_security_encrypt_title">Encrypt file</string>
+    <string name="setting_security_encrypt_summary">Encrypt output audio files, you can decrypt it or it will be decrypted when uploading to cloud.</string>
+    
+    <string name="setting_security_decrypt_title">Decrypt file</string>
+    <string name="setting_security_decrypt_summary">Decrypt your audio files to normal MP3 files.</string>
+    
+    <string name="setting_security_cloud_title">Set cloud account</string>
+    <string name="setting_security_cloud_summary">Set your cloud accout to upload audio files.</string>
+    
+    <string name="setting_security_upload_title">Upload to cloud</string>
+    <string name="setting_security_upload_summary">It will upload your recorded files to cloud storage.</string>
+    
+    <string name="setting_security_upload_wifi_title">Upload when WiFi</string>
+    <string name="setting_security_upload_wifi_summary">Only upload your file to cloud when WiFi is connected.</string>
+    
+    <string name="setting_other_category">Other items</string>
+    <string name="setting_other_share_title">Share this app</string>
+    <string name="setting_other_share_summary">Share with your friends this app.</string>
+    
+    <string name="setting_other_buy_fullverson_title">Buy full version</string>
+    <string name="setting_other_buy_fullverson_summary">Get full functionalities: umlimited record phone numbers and call recording length.</string>
 </resources>

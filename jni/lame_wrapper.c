@@ -10,24 +10,24 @@ static lame_global_flags * gpContext = NULL;
 static int gOutBufferSize = 0;
 static char * gpOutBuffer = NULL;
 /*
- * Class:     com_axen_mp3_LameWrapper
+ * Class:     com_irefire_mp3_LameWrapper
  * Method:    nativeGetVersion
  * Signature: ()Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL
-Java_com_axen_mp3_LameWrapper_nativeGetVersion(JNIEnv * env, jclass obj)
+Java_com_irefire_mp3_LameWrapper_nativeGetVersion(JNIEnv * env, jclass obj)
 {
   LOGD("nativeGetVersion");
   return charToString(env, "3.99.5");
 }
 
 /*
- * Class:     com_axen_mp3_LameWrapper
+ * Class:     com_irefire_mp3_LameWrapper
  * Method:    nativeInit
  * Signature: (IIII)I
  */
 JNIEXPORT jint JNICALL
-Java_com_axen_mp3_LameWrapper_nativeInit(JNIEnv * env, jclass obj, jint srate,
+Java_com_irefire_mp3_LameWrapper_nativeInit(JNIEnv * env, jclass obj, jint srate,
     jint chanel, jint outSampleRate, jint quality)
 {
   if (gpContext != NULL)
@@ -53,23 +53,23 @@ Java_com_axen_mp3_LameWrapper_nativeInit(JNIEnv * env, jclass obj, jint srate,
 }
 
 /*
- * Class:     com_axen_mp3_LameWrapper
+ * Class:     com_irefire_mp3_LameWrapper
  * Method:    nativePrepare
  * Signature: ()I
  */
 JNIEXPORT jint JNICALL
-Java_com_axen_mp3_LameWrapper_nativePrepare(JNIEnv * env, jclass obj)
+Java_com_irefire_mp3_LameWrapper_nativePrepare(JNIEnv * env, jclass obj)
 {
   return lame_init_params(gpContext);
 }
 
 /*
- * Class:     com_axen_mp3_LameWrapper
+ * Class:     com_irefire_mp3_LameWrapper
  * Method:    nativeEncodeBuffer
  * Signature: ([S[SI)[B
  */
 JNIEXPORT jbyteArray JNICALL
-Java_com_axen_mp3_LameWrapper_nativeEncodeBuffer(JNIEnv * env, jclass obj,
+Java_com_irefire_mp3_LameWrapper_nativeEncodeBuffer(JNIEnv * env, jclass obj,
     jshortArray left, jshortArray right, jint samples)
 {
   /*每次都算最大的缓冲区*/
@@ -97,12 +97,12 @@ Java_com_axen_mp3_LameWrapper_nativeEncodeBuffer(JNIEnv * env, jclass obj,
 }
 
 /*
- * Class:     com_axen_mp3_LameWrapper
+ * Class:     com_irefire_mp3_LameWrapper
  * Method:    nativeEncoderBufferInterleaved
  * Signature: ([SI)[B
  */
 JNIEXPORT jbyteArray JNICALL
-Java_com_axen_mp3_LameWrapper_nativeEncoderBufferInterleaved(JNIEnv * env,
+Java_com_irefire_mp3_LameWrapper_nativeEncoderBufferInterleaved(JNIEnv * env,
     jclass obj, jshortArray pcm, jint samples)
 {
   /*每次都算最大的缓冲区*/
@@ -133,12 +133,12 @@ Java_com_axen_mp3_LameWrapper_nativeEncoderBufferInterleaved(JNIEnv * env,
 }
 
 /*
- * Class:     com_axen_mp3_LameWrapper
+ * Class:     com_irefire_mp3_LameWrapper
  * Method:    nativeEncodeFlush
  * Signature: ()[B
  */
 JNIEXPORT jbyteArray JNICALL
-Java_com_axen_mp3_LameWrapper_nativeEncodeFlush(JNIEnv * env, jclass obj)
+Java_com_irefire_mp3_LameWrapper_nativeEncodeFlush(JNIEnv * env, jclass obj)
 {
   int currentSize = 14400;
   /*最少是7200，但是分配2倍*/
@@ -160,11 +160,11 @@ Java_com_axen_mp3_LameWrapper_nativeEncodeFlush(JNIEnv * env, jclass obj)
 }
 
 /*
- * Class:     com_axen_mp3_LameWrapper
+ * Class:     com_irefire_mp3_LameWrapper
  * Method:    nativeRelease
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_com_axen_mp3_LameWrapper_nativeRelease
+JNIEXPORT void JNICALL Java_com_irefire_mp3_LameWrapper_nativeRelease
 (JNIEnv * env, jclass obj)
   {
     free(gpOutBuffer);

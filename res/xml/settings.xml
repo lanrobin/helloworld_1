@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="setting_category_audio_key"
+        android:title="@string/setting_audio_category" >
+        <ListPreference
+            android:dialogTitle="@string/setting_audio_quality_dialog_title"
+            android:entries="@array/setting_audio_quality_entries"
+            android:entryValues="@array/setting_audio_quality_values"
+            android:key="setting_audio_quality_key"
+            android:defaultValue="2"
+            android:summary="@string/setting_audio_quality_summary"
+            android:title="@string/setting_audio_quality_title" />
+        <ListPreference
+            android:dialogTitle="@string/setting_audio_split_dialog_title"
+            android:entries="@array/setting_audio_split_entries"
+            android:entryValues="@array/setting_audio_split_values"
+            android:key="setting_audio_split_key"
+            android:defaultValue="5"
+            android:summary="@string/setting_audio_quality_summary"
+            android:title="@string/setting_audio_split_title" />
+
+        <CheckBoxPreference
+            android:key="setting_audio_record_call_key"
+            android:summary="@string/setting_audio_record_call_summary"
+            android:title="@string/setting_audio_record_call_title" />
+
+        <Preference
+            android:key="setting_audio_record_number_key"
+            android:summary="@string/setting_audio_record_number_summary"
+            android:title="@string/setting_audio_record_number_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="setting_security_category_key"
+        android:title="@string/setting_security_category" >
+        <CheckBoxPreference
+            android:key="setting_security_encrypt_key"
+            android:summary="@string/setting_security_encrypt_summary"
+            android:title="@string/setting_security_encrypt_title" />
+
+        <Preference
+            android:key="setting_security_decrypt_key"
+            android:summary="@string/setting_security_decrypt_summary"
+            android:title="@string/setting_security_decrypt_title" />
+        <Preference
+            android:key="setting_security_cloud_key"
+            android:summary="@string/setting_security_cloud_summary"
+            android:title="@string/setting_security_cloud_title" />
+
+        <CheckBoxPreference
+            android:key="setting_security_upload_key"
+            android:summary="@string/setting_security_upload_summary"
+            android:title="@string/setting_security_upload_title" />
+        <CheckBoxPreference
+            android:key="setting_security_upload_wifi_key"
+            android:summary="@string/setting_security_upload_wifi_summary"
+            android:title="@string/setting_security_upload_wifi_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="setting_other_category"
+        android:title="@string/setting_other_category" >
+        <Preference
+            android:key="setting_other_share_key"
+            android:summary="@string/setting_other_share_summary"
+            android:title="@string/setting_other_share_title" />
+        <Preference
+            android:key="setting_other_share_key"
+            android:summary="@string/setting_other_buy_fullverson_summary"
+            android:title="@string/setting_other_buy_fullverson_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
