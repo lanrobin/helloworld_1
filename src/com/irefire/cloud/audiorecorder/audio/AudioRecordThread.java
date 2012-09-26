@@ -19,8 +19,12 @@ public class AudioRecordThread extends Thread {
 	
 	
 	private static final int BUFFER_SIZE = 44100; //4410个short,就是一秒的数据
-	
-	
+	private boolean mStopRecording = false;  // 是不是要终止录音。我们不会立即终止，要等下一次读取数据之后再终止。
+	private AudioRecord mRecord;
+	private int mSampleRate = 44100;
+	private short[] mBuffer;
+	private boolean mLameInitialized = false;
+	private OutputStream mRecordOutputStream = null;
 	
 	private static class Holder {
 		public static AudioRecordThread _INSTANCE = new AudioRecordThread();
@@ -100,11 +104,4 @@ public class AudioRecordThread extends Thread {
 	public void stopRecording() {
 		mStopRecording = true;
 	}
-	
-	private AudioRecord mRecord;
-	private int mSampleRate = 44100;
-	private short[] mBuffer;
-	private boolean mStopRecording = false;
-	private boolean mLameInitialized = false;
-	private OutputStream mRecordOutputStream = null;
 }
